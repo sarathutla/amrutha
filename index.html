@@ -2,39 +2,228 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Welcome</title>
+  <title>Your Brand</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Professional business website built with performance and simplicity in mind." />
+
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f7fa;
+    :root {
+      --primary: #2563eb;
+      --text-dark: #111827;
+      --text-light: #6b7280;
+      --bg-light: #f9fafb;
+      --border: #e5e7eb;
+    }
+
+    * {
       margin: 0;
       padding: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
+      box-sizing: border-box;
     }
-    .box {
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--text-dark);
       background: white;
-      padding: 40px;
-      border-radius: 12px;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 20px;
+    }
+
+    /* Header */
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 20px 0;
+    }
+
+    .logo {
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 100px 0 80px;
       text-align: center;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      background: var(--bg-light);
     }
-    h1 {
+
+    .hero h1 {
+      font-size: 2.5rem;
+      max-width: 700px;
+      margin: 0 auto 20px;
+    }
+
+    .hero p {
+      color: var(--text-light);
+      max-width: 600px;
+      margin: 0 auto 30px;
+      font-size: 1.1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      padding: 12px 26px;
+      border-radius: 6px;
+      font-weight: 500;
+    }
+
+    /* Section */
+    section {
+      padding: 80px 0;
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    section p.section-desc {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 50px;
+      color: var(--text-light);
+    }
+
+    /* Features */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 30px;
+    }
+
+    .feature {
+      border: 1px solid var(--border);
+      padding: 30px;
+      border-radius: 10px;
+      background: white;
+    }
+
+    .feature h3 {
       margin-bottom: 10px;
-      color: #222;
+      font-size: 1.2rem;
     }
-    p {
-      color: #555;
+
+    .feature p {
+      color: var(--text-light);
+      font-size: 0.95rem;
+    }
+
+    /* CTA */
+    .cta {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .cta h2 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+
+    .cta a {
+      background: white;
+      color: var(--primary);
+      padding: 12px 26px;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 30px 0;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--text-light);
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="box">
-    <h1>Your Website Is Live 🎉</h1>
-    <p>Hosted on Cloudflare Pages</p>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">YourBrand</div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="container">
+      <h1>Building Simple & Reliable Digital Experiences</h1>
+      <p>
+        Fast, secure, and scalable websites designed for modern businesses.
+      </p>
+      <a href="#" class="btn">Get Started</a>
+    </div>
   </div>
+
+  <!-- About -->
+  <section>
+    <div class="container">
+      <h2>About Us</h2>
+      <p class="section-desc">
+        We focus on clean design, performance, and long-term reliability to help businesses grow online.
+      </p>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section>
+    <div class="container">
+      <h2>What We Offer</h2>
+      <p class="section-desc">
+        Everything you need for a professional online presence.
+      </p>
+
+      <div class="features">
+        <div class="feature">
+          <h3>Fast & Secure</h3>
+          <p>Optimized for speed and protected by modern security standards.</p>
+        </div>
+        <div class="feature">
+          <h3>Modern Design</h3>
+          <p>Clean, minimal layouts that build trust and credibility.</p>
+        </div>
+        <div class="feature">
+          <h3>Scalable</h3>
+          <p>Built to grow with your business and future needs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta">
+    <h2>Ready to build something great?</h2>
+    <a href="#">Contact Us</a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 YourBrand. All rights reserved.
+  </footer>
+
 </body>
 </html>
