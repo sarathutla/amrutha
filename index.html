@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Your Brand</title>
+  <title>Amrutha – Premium Single Polished Rice</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Professional business website built with performance and simplicity in mind." />
+  <meta name="description" content="Amrutha Premium Single Polished Rice – Naturally nutritious, carefully polished, and sourced from the finest paddy." />
 
   <style>
     :root {
-      --primary: #2563eb;
-      --text-dark: #111827;
+      --green: #1f7a4f;
+      --light-green: #eaf6ef;
+      --text-dark: #1f2937;
       --text-light: #6b7280;
-      --bg-light: #f9fafb;
       --border: #e5e7eb;
     }
 
@@ -24,17 +24,17 @@
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
       color: var(--text-dark);
-      background: white;
       line-height: 1.6;
+      background: white;
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
+    img {
+      max-width: 100%;
+      display: block;
     }
 
     .container {
-      max-width: 1100px;
+      max-width: 1200px;
       margin: auto;
       padding: 0 20px;
     }
@@ -45,59 +45,93 @@
       padding: 20px 0;
     }
 
-    .logo {
-      font-size: 1.3rem;
-      font-weight: 600;
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo img {
+      height: 50px;
     }
 
     /* Hero */
     .hero {
-      padding: 100px 0 80px;
-      text-align: center;
-      background: var(--bg-light);
+      background: var(--light-green);
+      padding: 100px 0;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 60px;
+      align-items: center;
     }
 
     .hero h1 {
-      font-size: 2.5rem;
-      max-width: 700px;
-      margin: 0 auto 20px;
+      font-size: 2.8rem;
+      margin-bottom: 20px;
     }
 
     .hero p {
       color: var(--text-light);
-      max-width: 600px;
-      margin: 0 auto 30px;
       font-size: 1.1rem;
+      margin-bottom: 30px;
     }
 
     .btn {
       display: inline-block;
-      background: var(--primary);
+      background: var(--green);
       color: white;
-      padding: 12px 26px;
+      padding: 14px 30px;
       border-radius: 6px;
-      font-weight: 500;
+      font-weight: 600;
+      text-decoration: none;
     }
 
-    /* Section */
+    /* Sections */
     section {
-      padding: 80px 0;
+      padding: 90px 0;
     }
 
     section h2 {
       text-align: center;
-      font-size: 2rem;
+      font-size: 2.2rem;
       margin-bottom: 20px;
     }
 
     section p.section-desc {
       text-align: center;
-      max-width: 600px;
-      margin: 0 auto 50px;
+      max-width: 700px;
+      margin: 0 auto 60px;
       color: var(--text-light);
     }
 
-    /* Features */
+    /* Product */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 40px;
+      align-items: center;
+    }
+
+    .product-box {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 40px;
+      background: white;
+    }
+
+    .product-box h3 {
+      margin-bottom: 15px;
+      font-size: 1.4rem;
+    }
+
+    .product-box p {
+      color: var(--text-light);
+    }
+
+    /* Why Amrutha */
     .features {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -105,13 +139,13 @@
     }
 
     .feature {
-      border: 1px solid var(--border);
       padding: 30px;
-      border-radius: 10px;
-      background: white;
+      border-radius: 12px;
+      background: #f9fafb;
+      border: 1px solid var(--border);
     }
 
-    .feature h3 {
+    .feature h4 {
       margin-bottom: 10px;
       font-size: 1.2rem;
     }
@@ -121,109 +155,140 @@
       font-size: 0.95rem;
     }
 
-    /* CTA */
-    .cta {
-      background: var(--primary);
+    /* Trust */
+    .trust {
+      background: var(--green);
       color: white;
       text-align: center;
       padding: 80px 20px;
     }
 
-    .cta h2 {
+    .trust h2 {
       margin-bottom: 20px;
-      font-size: 2rem;
     }
 
-    .cta a {
-      background: white;
-      color: var(--primary);
-      padding: 12px 26px;
-      border-radius: 6px;
-      font-weight: 600;
+    .trust p {
+      max-width: 700px;
+      margin: auto;
+      opacity: 0.95;
     }
 
     /* Footer */
     footer {
       border-top: 1px solid var(--border);
-      padding: 30px 0;
+      padding: 40px 0;
       text-align: center;
       font-size: 0.9rem;
       color: var(--text-light);
     }
 
-    /* Responsive */
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
       .hero h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
-  <header>
-    <div class="container">
-      <div class="logo">YourBrand</div>
-    </div>
-  </header>
-
-  <!-- Hero -->
-  <div class="hero">
-    <div class="container">
-      <h1>Building Simple & Reliable Digital Experiences</h1>
-      <p>
-        Fast, secure, and scalable websites designed for modern businesses.
-      </p>
-      <a href="#" class="btn">Get Started</a>
+<!-- Header -->
+<header>
+  <div class="container header-inner">
+    <div class="logo">
+      <img src="logo.png" alt="Amrutha Logo">
     </div>
   </div>
+</header>
 
-  <!-- About -->
-  <section>
-    <div class="container">
-      <h2>About Us</h2>
-      <p class="section-desc">
-        We focus on clean design, performance, and long-term reliability to help businesses grow online.
+<!-- Hero -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <h1>Pure. Nutritious. Naturally Better Rice.</h1>
+      <p>
+        Amrutha Premium Single Polished Rice preserves essential nutrients while delivering exceptional taste, softness, and purity in every grain.
       </p>
+      <a href="#contact" class="btn">Enquire Now</a>
     </div>
-  </section>
+    <div>
+      <img src="https://images.unsplash.com/photo-1604908177522-4323c5fdfc6a" alt="Rice grains">
+    </div>
+  </div>
+</section>
 
-  <!-- Features -->
-  <section>
-    <div class="container">
-      <h2>What We Offer</h2>
-      <p class="section-desc">
-        Everything you need for a professional online presence.
-      </p>
+<!-- Product -->
+<section>
+  <div class="container">
+    <h2>Our Product</h2>
+    <p class="section-desc">
+      Carefully processed using advanced milling techniques to retain nutrition and natural goodness.
+    </p>
 
-      <div class="features">
-        <div class="feature">
-          <h3>Fast & Secure</h3>
-          <p>Optimized for speed and protected by modern security standards.</p>
-        </div>
-        <div class="feature">
-          <h3>Modern Design</h3>
-          <p>Clean, minimal layouts that build trust and credibility.</p>
-        </div>
-        <div class="feature">
-          <h3>Scalable</h3>
-          <p>Built to grow with your business and future needs.</p>
-        </div>
+    <div class="product-grid">
+      <div class="product-box">
+        <h3>Premium Single Polished Rice</h3>
+        <p>
+          Unlike over-polished rice, single polishing ensures minimal nutrient loss while maintaining excellent cooking quality, aroma, and texture.
+        </p>
+      </div>
+      <div class="product-box">
+        <h3>Ideal for Daily Consumption</h3>
+        <p>
+          Suitable for households, hotels, restaurants, and bulk buyers seeking healthier rice without compromising taste.
+        </p>
       </div>
     </div>
-  </section>
-
-  <!-- CTA -->
-  <div class="cta">
-    <h2>Ready to build something great?</h2>
-    <a href="#">Contact Us</a>
   </div>
+</section>
 
-  <!-- Footer -->
-  <footer>
-    © 2025 YourBrand. All rights reserved.
-  </footer>
+<!-- Why Amrutha -->
+<section>
+  <div class="container">
+    <h2>Why Choose Amrutha</h2>
+    <p class="section-desc">
+      A commitment to quality, purity, and consistency at every stage.
+    </p>
+
+    <div class="features">
+      <div class="feature">
+        <h4>Carefully Sourced Paddy</h4>
+        <p>Procured from trusted farmers and quality-checked before processing.</p>
+      </div>
+      <div class="feature">
+        <h4>Advanced Milling</h4>
+        <p>Single polished using modern machinery to preserve nutrients.</p>
+      </div>
+      <div class="feature">
+        <h4>Consistent Quality</h4>
+        <p>Uniform grains, excellent cooking results, batch after batch.</p>
+      </div>
+      <div class="feature">
+        <h4>Food Safety Focused</h4>
+        <p>Processed and packed under strict hygiene and safety standards.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Trust -->
+<div class="trust">
+  <h2>A Brand You Can Trust</h2>
+  <p>
+    Amrutha stands for transparency, reliability, and long-term partnerships with distributors, retailers, and consumers.
+  </p>
+</div>
+
+<!-- Footer -->
+<footer id="contact">
+  <p><strong>Amrutha – Premium Single Polished Rice</strong></p>
+  <p>For business enquiries & distribution partnerships</p>
+  <p>Email: info@yourdomain.com | Phone: +91-XXXXXXXXXX</p>
+  <p style="margin-top:10px;">© 2025 Amrutha. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
