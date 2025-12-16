@@ -9,7 +9,6 @@
 </head>
 <body>
 
-<!-- Header -->
 <header>
   <div class="container header-inner">
     <div class="logo">
@@ -27,7 +26,7 @@
   </div>
 </header>
 
-<!-- Hero -->
+<!-- HERO -->
 <section class="hero">
   <div class="container">
     <div class="hero-fade">
@@ -41,56 +40,49 @@
   </div>
 </section>
 
-<!-- Product intro -->
+<!-- PRODUCT SECTION -->
 <section>
   <div class="container">
-    <div class="animate-text section-intro">
+    <div class="fade-up section-intro">
       <h2>Premium Single Polished Rice</h2>
-      <p class="section-desc">
+      <p>
         Unlike over-polished rice, Amrutha undergoes minimal processing,
         preserving natural goodness while ensuring excellent cooking performance.
       </p>
     </div>
 
     <div class="grid grid-2">
-      <div class="card animate-block" style="transition-delay: 0.3s;">
+      <div class="card fade-up" style="transition-delay: 0.3s;">
         <h3>Healthier Choice</h3>
-        <p>
-          Retains more nutrients compared to fully polished rice,
-          supporting balanced daily consumption.
-        </p>
+        <p>Retains more nutrients compared to fully polished rice.</p>
       </div>
 
-      <div class="card animate-block" style="transition-delay: 0.9s;">
+      <div class="card fade-up" style="transition-delay: 0.9s;">
         <h3>Consistent Quality</h3>
-        <p>
-          Uniform grains, reliable texture and dependable cooking results
-          across every batch.
-        </p>
+        <p>Uniform grains with dependable cooking performance.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Trust -->
+<!-- TRUST -->
 <div class="highlight">
-  <div class="animate-text">
+  <div class="fade-up">
     <h2>A Brand Built on Trust</h2>
     <p>
-      From sourcing paddy to hygienic packaging, Amrutha follows disciplined
-      processes focused on quality, transparency and long-term reliability.
+      From sourcing paddy to hygienic packaging, Amrutha follows disciplined,
+      transparent and quality-focused processes.
     </p>
   </div>
 </div>
 
-<!-- Footer -->
 <footer>
   <p><strong>Amrutha – Premium Single Polished Rice</strong></p>
   <p>Email: info@yourdomain.com | Phone: +91-XXXXXXXXXX</p>
   <p>© 2025 Amrutha. All rights reserved.</p>
 </footer>
 
-<!-- Scroll animation script -->
+<!-- OBSERVER (CLEAN & GUARANTEED) -->
 <script>
   const observer = new IntersectionObserver(
     entries => {
@@ -100,11 +92,10 @@
         }
       });
     },
-    { threshold: 0.45 }
+    { threshold: 0.35 }
   );
 
-  document.querySelectorAll('.animate-text, .animate-block')
-    .forEach(el => observer.observe(el));
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 </script>
 
 </body>
