@@ -34,15 +34,3 @@ const header = document.querySelector('.site-header');
 window.addEventListener('scroll', () => {
   header.classList.toggle('scrolled', window.scrollY > 80);
 });
-
-/* HERO IMAGE MICRO PARALLAX */
-const heroImg = document.querySelector('.hero-image img');
-
-window.addEventListener('scroll', () => {
-  if (!heroImg) return;
-
-  const scrollY = window.scrollY;
-  if (scrollY < 400) {
-    heroImg.style.transform = `translateY(${scrollY * 0.05}px) scale(1)`;
-  }
-});
