@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  width="800"
+  height="200"
+  viewBox="0 0 800 200"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <!-- Background (transparent) -->
+  <rect width="800" height="200" fill="none"/>
+
+  <!-- Brand Text -->
+  <text
+    x="400"
+    y="130"
+    text-anchor="middle"
+    font-family="Playfair Display, Georgia, serif"
+    font-size="96"
+    font-weight="500"
+    letter-spacing="4"
+    fill="#1f5f3b"
+  >
+    AMRUTHA
+  </text>
+
+  <!-- Grain Symbol -->
+  <path
+    d="M430 38
+       C420 20, 395 20, 385 38
+       C395 32, 420 32, 430 38
+       Z"
+    fill="#c9b68b"
+  />
+</svg>
