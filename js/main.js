@@ -1,41 +1,35 @@
-const revealElements = document.querySelectorAll('.reveal');
-const revealItems = document.querySelectorAll('.reveal-item');
+/* HERO LOAD */
+window.addEventListener('load', () => {
+  document.body.classList.add('loaded');
+});
 
-const options = {
-  threshold: 0.1,
-  rootMargin: "0px 0px -50px 0px"
+/* SCROLL REVEAL */
+const observerOptions = {
+  threshold: 0.15,
+  rootMargin: "0px 0px -80px 0px"
 };
 
-const observer = new IntersectionObserver((entries) => {
+const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
-    }
+    if (!entry.isIntersecting) return;
+
+    entry.target.classList.add('visible');
+
+    const staggerItems = entry.target.querySelectorAll('[data-stagger]');
+    staggerItems.forEach((el, i) => {
+      el.style.transitionDelay = `${i * 120}ms`;
+      el.classList.add('visible');
+    });
+
+    revealObserver.unobserve(entry.target);
   });
-}, options);
+}, observerOptions);
 
-revealElements.forEach(el => observer.observe(el));
-revealItems.forEach(el => observer.observe(el));
+document.querySelectorAll('.reveal').forEach(el => {
+  revealObserver.observe(el);
+});
 
-const listObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.querySelectorAll('li').forEach((li, i) => {
-        setTimeout(() => {
-          li.style.opacity = 1;
-          li.style.transform = 'translateY(0)';
-        }, i * 120);
-      });
-      listObserver.unobserve(entry.target);
-    }
-  });
-}, options);
-
-document.querySelectorAll('.reveal-list').forEach(list =>
-  listObserver.observe(list)
-);
-
+/* HEADER SCROLL */
 const header = document.querySelector('.site-header');
 window.addEventListener('scroll', () => {
   header.classList.toggle('scrolled', window.scrollY > 80);
