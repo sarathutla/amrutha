@@ -22,10 +22,54 @@ section {
   padding: 100px 0;
 }
 
-/* TYPOGRAPHY */
+/* =========================
+   HEADER
+========================= */
+.site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 20px 0;
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+
+.site-header.scrolled {
+  background: rgba(249, 249, 247, 0.95);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+}
+
+.header-cta {
+  border: 1px solid #1f5f3b;
+  padding: 8px 18px;
+  border-radius: 30px;
+  color: #1f5f3b;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.header-cta:hover {
+  background: #1f5f3b;
+  color: #fff;
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
 h1, h2, h3 {
   font-family: 'Playfair Display', serif;
-  font-weight: 500;
 }
 
 h1 { font-size: 3rem; }
@@ -37,7 +81,9 @@ p {
   margin-bottom: 20px;
 }
 
-/* BUTTON */
+/* =========================
+   BUTTON
+========================= */
 .btn-primary {
   display: inline-block;
   padding: 14px 32px;
@@ -52,15 +98,18 @@ p {
   background: #184a2e;
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 .hero {
   min-height: 90vh;
+  padding-top: 120px;
   display: flex;
   align-items: center;
   background: #e6e1d8;
 }
 
-/* HERO INTRO ANIMATION */
+/* HERO INTRO */
 .hero h1,
 .hero p,
 .hero .btn-primary {
@@ -79,7 +128,9 @@ p {
   }
 }
 
-/* SECTIONS */
+/* =========================
+   SECTIONS
+========================= */
 .problem { background: #fff; }
 .single-polished { background: #f3f4f1; }
 .why-amrutha { background: #fff; }
@@ -106,7 +157,9 @@ p {
   text-align: center;
 }
 
-.cta h2, .cta p { color: #fff; }
+.cta h2, .cta p {
+  color: #fff;
+}
 
 .footer {
   padding: 40px 0;
@@ -114,7 +167,9 @@ p {
   color: #666;
 }
 
-/* SCROLL ANIMATIONS */
+/* =========================
+   SCROLL ANIMATIONS
+========================= */
 .reveal {
   opacity: 0;
   transform: translateY(40px);
@@ -145,8 +200,6 @@ p {
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
-  .features {
-    grid-template-columns: 1fr;
-  }
+  .features { grid-template-columns: 1fr; }
   h1 { font-size: 2.4rem; }
 }

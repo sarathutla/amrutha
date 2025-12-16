@@ -1,3 +1,6 @@
+// ===============================
+// SCROLL REVEAL
+// ===============================
 const revealElements = document.querySelectorAll('.reveal');
 const revealItems = document.querySelectorAll('.reveal-item');
 
@@ -18,6 +21,7 @@ const observer = new IntersectionObserver((entries) => {
 revealElements.forEach(el => observer.observe(el));
 revealItems.forEach(el => observer.observe(el));
 
+// Stagger list items
 const listObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -35,3 +39,16 @@ const listObserver = new IntersectionObserver((entries) => {
 document.querySelectorAll('.reveal-list').forEach(list =>
   listObserver.observe(list)
 );
+
+// ===============================
+// HEADER SCROLL EFFECT
+// ===============================
+const header = document.querySelector('.site-header');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 80) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+});
