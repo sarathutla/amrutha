@@ -18,7 +18,7 @@ body {
   padding: 0 20px;
 }
 
-/* TYPOGRAPHY RHYTHM */
+/* TYPOGRAPHY */
 h1, h2, h3 {
   letter-spacing: -0.02em;
 }
@@ -107,7 +107,15 @@ section {
 
 .hero h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 3rem;
+  font-size: 3.4rem;
+  line-height: 1.15;
+}
+
+.hero-sub {
+  font-size: 1.05rem;
+  max-width: 480px;
+  margin-top: 18px;
+  color: #2a2a2a;
 }
 
 /* HERO LOAD ANIMATION */
@@ -151,7 +159,7 @@ body.loaded .hero-image {
   box-shadow: 0 8px 24px rgba(31,95,59,0.25);
 }
 
-/* SPLIT LAYOUT */
+/* SPLIT */
 .split {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -169,7 +177,6 @@ body.loaded .hero-image {
 
 /* PLACEHOLDERS */
 .placeholder {
-  position: relative;
   border-radius: 24px;
   background: linear-gradient(135deg, #f2f0ea, #e8e4d9);
   box-shadow:
@@ -220,6 +227,15 @@ body.loaded .hero-image {
 .process-steps li {
   margin-bottom: 14px;
   font-size: 0.95rem;
+}
+
+/* EYEBROW */
+.section-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.7rem;
+  color: #777;
+  margin-bottom: 10px;
 }
 
 /* SECTION COLORS */
