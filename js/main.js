@@ -1,42 +1,37 @@
-// ===============================
-// SCROLL REVEAL ANIMATIONS
-// ===============================
 const revealElements = document.querySelectorAll('.reveal');
 const revealItems = document.querySelectorAll('.reveal-item');
-const revealLists = document.querySelectorAll('.reveal-list li');
 
-const observerOptions = {
-  threshold: 0.15,
+const options = {
+  threshold: 0.1,
+  rootMargin: "0px 0px -50px 0px"
 };
 
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('visible');
-      revealObserver.unobserve(entry.target);
+      observer.unobserve(entry.target);
     }
   });
-}, observerOptions);
+}, options);
 
-revealElements.forEach((el) => revealObserver.observe(el));
-revealItems.forEach((el) => revealObserver.observe(el));
+revealElements.forEach(el => observer.observe(el));
+revealItems.forEach(el => observer.observe(el));
 
-// Stagger list items
 const listObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
+  entries.forEach(entry => {
     if (entry.isIntersecting) {
-      const items = entry.target.querySelectorAll('li');
-      items.forEach((item, index) => {
+      entry.target.querySelectorAll('li').forEach((li, i) => {
         setTimeout(() => {
-          item.style.opacity = '1';
-          item.style.transform = 'translateY(0)';
-        }, index * 120);
+          li.style.opacity = 1;
+          li.style.transform = 'translateY(0)';
+        }, i * 120);
       });
       listObserver.unobserve(entry.target);
     }
   });
-}, observerOptions);
+}, options);
 
-document.querySelectorAll('.reveal-list').forEach((list) => {
-  listObserver.observe(list);
-});
+document.querySelectorAll('.reveal-list').forEach(list =>
+  listObserver.observe(list)
+);
