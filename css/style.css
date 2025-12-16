@@ -49,7 +49,7 @@ p {
 }
 
 section {
-  padding: 110px 0;
+  padding: 120px 0;
 }
 
 section:nth-of-type(even) {
@@ -94,7 +94,7 @@ nav a:hover {
     var(--green-light) 0%,
     #ffffff 100%
   );
-  padding: 150px 0;
+  padding: 160px 0;
 }
 
 /* Cinematic hero reveal */
@@ -139,7 +139,7 @@ nav a:hover {
    Section intro spacing
 -------------------- */
 .section-intro {
-  margin-bottom: 80px;
+  margin-bottom: 90px;
 }
 
 /* --------------------
@@ -147,7 +147,7 @@ nav a:hover {
 -------------------- */
 .grid {
   display: grid;
-  gap: 44px;
+  gap: 48px;
 }
 
 .grid-2 {
@@ -157,13 +157,13 @@ nav a:hover {
 .card {
   border: 1px solid var(--border);
   border-radius: 16px;
-  padding: 44px;
+  padding: 48px;
   background: white;
   transition: box-shadow 0.4s ease;
 }
 
 .card:hover {
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
 }
 
 /* --------------------
@@ -173,7 +173,7 @@ nav a:hover {
   background: var(--green);
   color: white;
   text-align: center;
-  padding: 110px 20px;
+  padding: 130px 20px;
 }
 
 .highlight p {
@@ -193,17 +193,33 @@ footer {
 }
 
 /* --------------------
-   Scroll reveal (sections & cards)
+   TEXT REVEAL (lighter)
 -------------------- */
-.animate {
+.animate-text {
+  opacity: 0;
+  transform: translateY(45px);
+  transition:
+    opacity 1.4s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-text.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --------------------
+   BLOCK / CARD REVEAL (heavier)
+-------------------- */
+.animate-block {
   opacity: 0;
   transform: translateY(70px);
   transition:
-    opacity 1.6s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 1.6s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity 1.8s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 1.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.animate.show {
+.animate-block.show {
   opacity: 1;
   transform: translateY(0);
 }
@@ -214,21 +230,4 @@ footer {
 @media (max-width: 768px) {
   h1 { font-size: 2.2rem; }
   h2 { font-size: 1.9rem; }
-}
-
-/* Card stagger delays */
-.grid .card.animate:nth-child(1) {
-  transition-delay: 0.3s;
-}
-
-.grid .card.animate:nth-child(2) {
-  transition-delay: 0.8s;
-}
-
-.grid .card.animate:nth-child(3) {
-  transition-delay: 1.3s;
-}
-
-.grid .card.animate:nth-child(4) {
-  transition-delay: 1.8s;
 }
