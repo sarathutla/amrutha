@@ -1,11 +1,16 @@
 :root {
   --green: #1f7a4f;
+  --green-dark: #176442;
   --green-light: #eef7f2;
   --text-dark: #1f2937;
   --text-muted: #6b7280;
   --border: #e5e7eb;
+  --bg-soft: #fafafa;
 }
 
+/* --------------------
+   Base reset
+-------------------- */
 * {
   margin: 0;
   padding: 0;
@@ -15,33 +20,45 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
   color: var(--text-dark);
-  background: white;
+  background: #ffffff;
   line-height: 1.75;
 }
 
-/* Typography hierarchy - premium feel */
-h1, h2, h3, h4 {
+/* --------------------
+   Typography
+-------------------- */
+h1, h2, h3 {
   letter-spacing: -0.02em;
 }
 
-h1 {
-  font-weight: 600;
+h1 { font-size: 3rem; font-weight: 600; }
+h2 { font-size: 2.3rem; font-weight: 600; }
+h3 { font-size: 1.3rem; font-weight: 500; }
+
+p {
+  color: var(--text-muted);
 }
 
-h2 {
-  font-weight: 600;
-}
-
-h3 {
-  font-weight: 500;
-}
-
+/* --------------------
+   Layout
+-------------------- */
 .container {
   max-width: 1200px;
   margin: auto;
   padding: 0 20px;
 }
 
+section {
+  padding: 90px 0;
+}
+
+section:nth-of-type(even) {
+  background: var(--bg-soft);
+}
+
+/* --------------------
+   Header
+-------------------- */
 header {
   border-bottom: 1px solid var(--border);
   padding: 18px 0;
@@ -68,56 +85,56 @@ nav a:hover {
   color: var(--green);
 }
 
+/* --------------------
+   Hero
+-------------------- */
 .hero {
   background: linear-gradient(
     180deg,
     var(--green-light) 0%,
     #ffffff 100%
   );
+  padding: 120px 0;
 }
 
-.hero h1 {
-  font-size: 3rem;
-  max-width: 720px;
+/* Hero fade-up on load */
+.hero-fade {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: heroFadeUp 0.9s ease forwards;
+  animation-delay: 0.3s;
 }
 
-.hero p {
-  margin: 24px 0 36px;
-  max-width: 640px;
-  color: var(--text-muted);
-  font-size: 1.1rem;
+@keyframes heroFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
+/* --------------------
+   Buttons
+-------------------- */
 .btn {
+  display: inline-block;
+  margin-top: 30px;
   background: var(--green);
   color: white;
   padding: 15px 38px;
   border-radius: 999px;
-  text-decoration: none;
   font-weight: 600;
+  text-decoration: none;
   transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .btn:hover {
-  background: #176442;
+  background: var(--green-dark);
   transform: translateY(-1px);
 }
 
-section {
-  padding: 90px 0;
-}
-
-section h2 {
-  font-size: 2.4rem;
-  margin-bottom: 20px;
-}
-
-.section-desc {
-  max-width: 720px;
-  color: var(--text-muted);
-  margin-bottom: 60px;
-}
-
+/* --------------------
+   Cards & grids
+-------------------- */
 .grid {
   display: grid;
   gap: 40px;
@@ -140,6 +157,9 @@ section h2 {
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
 }
 
+/* --------------------
+   Highlight block
+-------------------- */
 .highlight {
   background: var(--green);
   color: white;
@@ -147,47 +167,40 @@ section h2 {
   padding: 90px 20px;
 }
 
+.highlight p {
+  color: rgba(255,255,255,0.95);
+}
+
+/* --------------------
+   Footer
+-------------------- */
 footer {
   border-top: 1px solid var(--border);
   padding: 60px 0;
   text-align: center;
   font-size: 0.9rem;
   color: var(--text-muted);
-  background: #fafafa;
+  background: var(--bg-soft);
 }
 
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.2rem;
-  }
-}
-
-/* Visual depth enhancements */
-section:nth-of-type(even) {
-  background: #fafafa;
-}
-
-section {
-  position: relative;
-}
-
-section::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 4px;
-  background: var(--green);
-  margin-top: 40px;
-}
-
-/* Scroll animation */
+/* --------------------
+   Scroll fade-up animation
+-------------------- */
 .animate {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
 .animate.show {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* --------------------
+   Responsive
+-------------------- */
+@media (max-width: 768px) {
+  h1 { font-size: 2.2rem; }
+  h2 { font-size: 1.9rem; }
 }
