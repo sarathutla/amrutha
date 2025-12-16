@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Amrutha – Premium Single Polished Rice</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Amrutha Premium Single Polished Rice – nutrition-focused, minimally processed rice for everyday Indian cooking." />
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -26,73 +27,81 @@
   </div>
 </header>
 
+<!-- Hero -->
 <section class="hero">
   <div class="container">
-    <div class="animate">
+    <div class="hero-fade">
       <h1>Rice That Respects Nutrition, Purity and Everyday Indian Cooking</h1>
       <p>
         Amrutha Premium Single Polished Rice is carefully processed to retain essential nutrients,
-        ensuring better health, taste and consistency for Indian households and institutions.
+        delivering consistent quality and taste for Indian households and institutions.
       </p>
       <a href="distributors.html" class="btn">Business Enquiries</a>
     </div>
   </div>
 </section>
 
+<!-- Product intro -->
 <section>
   <div class="container">
     <div class="animate">
       <h2>Premium Single Polished Rice</h2>
       <p class="section-desc">
-        Unlike over-polished rice, Amrutha undergoes only a single polishing process,
-        preserving natural goodness.
+        Unlike over-polished rice, Amrutha undergoes minimal processing,
+        preserving natural goodness while ensuring excellent cooking performance.
       </p>
     </div>
 
     <div class="grid grid-2">
       <div class="card animate">
         <h3>Healthier Choice</h3>
-        <p>Retains more nutrients compared to fully polished rice.</p>
+        <p>
+          Retains more nutrients compared to fully polished rice,
+          supporting balanced daily consumption.
+        </p>
       </div>
 
       <div class="card animate">
         <h3>Consistent Quality</h3>
-        <p>Uniform grains with reliable cooking performance.</p>
+        <p>
+          Uniform grains, reliable texture and dependable cooking results
+          across every batch.
+        </p>
       </div>
     </div>
   </div>
 </section>
 
+<!-- Trust -->
 <div class="highlight">
   <div class="animate">
     <h2>A Brand Built on Trust</h2>
     <p>
-      From sourcing paddy to packaging finished rice,
-      Amrutha follows strict quality and hygiene standards.
+      From sourcing paddy to hygienic packaging, Amrutha follows disciplined
+      processes focused on quality, transparency and long-term reliability.
     </p>
   </div>
 </div>
 
+<!-- Footer -->
 <footer>
   <p><strong>Amrutha – Premium Single Polished Rice</strong></p>
-  <p>For distribution & bulk supply enquiries</p>
   <p>Email: info@yourdomain.com | Phone: +91-XXXXXXXXXX</p>
   <p>© 2025 Amrutha. All rights reserved.</p>
 </footer>
 
+<!-- Scroll animation script -->
 <script>
-  const elements = document.querySelectorAll('.animate');
-
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('show');
       }
     });
-  }, { threshold: 0.2 });
+  }, { threshold: 0.25 });
 
-  elements.forEach(el => observer.observe(el));
+  document.querySelectorAll('.animate').forEach(el => observer.observe(el));
 </script>
-  
+
 </body>
 </html>
