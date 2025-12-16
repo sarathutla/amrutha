@@ -1,0 +1,254 @@
+/* =========================
+   CSS RESET & BASE
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  color: #1a1a1a;
+  background-color: #f9f9f7;
+  line-height: 1.7;
+}
+
+/* =========================
+   GLOBAL UTILITIES
+========================= */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  padding: 100px 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2.2rem;
+  margin-bottom: 24px;
+}
+
+h3 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+}
+
+p {
+  font-size: 1rem;
+  color: #333;
+  max-width: 700px;
+  margin-bottom: 20px;
+}
+
+ul,
+ol {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn-primary {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 32px;
+  background-color: #1f5f3b;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 40px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #184a2e;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  background-color: #e6e1d8;
+}
+
+.hero h1 {
+  max-width: 700px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  max-width: 600px;
+}
+
+/* =========================
+   PROBLEM SECTION
+========================= */
+.problem {
+  background-color: #ffffff;
+}
+
+/* =========================
+   SINGLE POLISHED SECTION
+========================= */
+.single-polished {
+  background-color: #f3f4f1;
+}
+
+.single-polished ul {
+  list-style-type: disc;
+}
+
+/* =========================
+   WHY AMRUTHA
+========================= */
+.why-amrutha {
+  background-color: #ffffff;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.feature {
+  background-color: #f9f9f7;
+  padding: 30px;
+  border-radius: 16px;
+}
+
+/* =========================
+   PROCESS
+========================= */
+.process {
+  background-color: #f3f4f1;
+}
+
+.process-steps {
+  margin-top: 30px;
+}
+
+.process-steps li {
+  padding-left: 10px;
+}
+
+/* =========================
+   SELLING
+========================= */
+.selling {
+  background-color: #ffffff;
+}
+
+/* =========================
+   MISSION
+========================= */
+.mission {
+  background-color: #f3f4f1;
+}
+
+.mission h3 {
+  margin-top: 40px;
+}
+
+/* =========================
+   CTA
+========================= */
+.cta {
+  background-color: #1f5f3b;
+  color: #ffffff;
+  text-align: center;
+}
+
+.cta h2,
+.cta p {
+  color: #ffffff;
+}
+
+.cta p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+  background-color: #ffffff;
+  padding: 40px 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 900px) {
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  h2 {
+    font-size: 1.9rem;
+  }
+
+  section {
+    padding: 80px 0;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  section {
+    padding: 60px 0;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 120px 0;
+  }
+}
