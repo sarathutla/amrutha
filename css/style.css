@@ -49,7 +49,7 @@ p {
 }
 
 section {
-  padding: 100px 0;
+  padding: 110px 0;
 }
 
 section:nth-of-type(even) {
@@ -94,10 +94,10 @@ nav a:hover {
     var(--green-light) 0%,
     #ffffff 100%
   );
-  padding: 140px 0;
+  padding: 150px 0;
 }
 
-/* === CINEMATIC HERO REVEAL === */
+/* Cinematic hero reveal */
 .hero-fade > * {
   opacity: 0;
   transform: translateY(60px);
@@ -136,6 +136,13 @@ nav a:hover {
 }
 
 /* --------------------
+   Section intro spacing
+-------------------- */
+.section-intro {
+  margin-bottom: 80px;
+}
+
+/* --------------------
    Cards & grids
 -------------------- */
 .grid {
@@ -166,7 +173,7 @@ nav a:hover {
   background: var(--green);
   color: white;
   text-align: center;
-  padding: 100px 20px;
+  padding: 110px 20px;
 }
 
 .highlight p {
@@ -186,7 +193,7 @@ footer {
 }
 
 /* --------------------
-   STRONG SCROLL REVEAL
+   Scroll reveal (sections & cards)
 -------------------- */
 .animate {
   opacity: 0;
