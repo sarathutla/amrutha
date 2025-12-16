@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  width="1200"
+  height="600"
+  viewBox="0 0 1200 600"
+  xmlns="http://www.w3.org/2000/svg"
+  role="img"
+  aria-label="Amrutha logo">
+
+  <!-- Brand Color -->
+  <defs>
+    <style>
+      .brand-green {
+        fill: #6B8F5E;
+        stroke: #6B8F5E;
+      }
+    </style>
+  </defs>
+
+  <!-- Icon (Leaves / Grain Motif) -->
+  <g transform="translate(600 180)" fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" class="brand-green">
+    <!-- Left leaf -->
+    <path d="M -60 40 C -90 -10, -120 -80, -80 -120" />
+    <path d="M -60 40 C -40 -10, -20 -80, -40 -120" />
+
+    <!-- Center leaf -->
+    <path d="M 0 50 C -10 -20, -10 -110, 0 -150" />
+    <path d="M 0 50 C 10 -20, 10 -110, 0 -150" />
+
+    <!-- Right leaf -->
+    <path d="M 60 40 C 90 -10, 120 -80, 80 -120" />
+    <path d="M 60 40 C 40 -10, 20 -80, 40 -120" />
+  </g>
+
+  <!-- Brand Name -->
+  <text
+    x="600"
+    y="360"
+    text-anchor="middle"
+    font-size="120"
+    font-weight="700"
+    letter-spacing="6"
+    font-family="Poppins, Montserrat, Arial, sans-serif"
+    class="brand-green">
+    AMRUTHA
+  </text>
+
+  <!-- Underline -->
+  <line
+    x1="350"
+    y1="390"
+    x2="850"
+    y2="390"
+    stroke-width="6"
+    class="brand-green" />
+
+</svg>
