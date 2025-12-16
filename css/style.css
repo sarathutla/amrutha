@@ -180,12 +180,11 @@ section::after {
   margin-top: 40px;
 }
 
-/* === Scroll animation (final, clean) === */
+/* Scroll animation – stable version */
 .fade-up {
   opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-  will-change: opacity, transform;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
 .fade-up.visible {
