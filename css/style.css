@@ -8,9 +8,7 @@
   --bg-soft: #fafafa;
 }
 
-/* --------------------
-   Base reset
--------------------- */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -20,13 +18,11 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
   color: var(--text-dark);
-  background: #ffffff;
   line-height: 1.75;
+  background: #fff;
 }
 
-/* --------------------
-   Typography
--------------------- */
+/* TYPOGRAPHY */
 h1, h2, h3 {
   letter-spacing: -0.02em;
 }
@@ -35,13 +31,9 @@ h1 { font-size: 3rem; font-weight: 600; }
 h2 { font-size: 2.3rem; font-weight: 600; }
 h3 { font-size: 1.3rem; font-weight: 500; }
 
-p {
-  color: var(--text-muted);
-}
+p { color: var(--text-muted); }
 
-/* --------------------
-   Layout
--------------------- */
+/* LAYOUT */
 .container {
   max-width: 1200px;
   margin: auto;
@@ -56,9 +48,7 @@ section:nth-of-type(even) {
   background: var(--bg-soft);
 }
 
-/* --------------------
-   Header
--------------------- */
+/* HEADER */
 header {
   border-bottom: 1px solid var(--border);
   padding: 18px 0;
@@ -66,13 +56,11 @@ header {
 
 .header-inner {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
-.logo img {
-  height: 48px;
-}
+.logo img { height: 48px; }
 
 nav a {
   margin-left: 24px;
@@ -81,27 +69,19 @@ nav a {
   color: var(--text-dark);
 }
 
-nav a:hover {
-  color: var(--green);
-}
+nav a:hover { color: var(--green); }
 
-/* --------------------
-   Hero
--------------------- */
+/* HERO */
 .hero {
-  background: linear-gradient(
-    180deg,
-    var(--green-light) 0%,
-    #ffffff 100%
-  );
+  background: linear-gradient(180deg, var(--green-light), #fff);
   padding: 160px 0;
 }
 
-/* Cinematic hero reveal */
+/* HERO LOAD ANIMATION */
 .hero-fade > * {
   opacity: 0;
   transform: translateY(60px);
-  animation: heroReveal 1.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: heroReveal 1.8s cubic-bezier(0.16,1,0.3,1) forwards;
 }
 
 .hero-fade h1 { animation-delay: 0.1s; }
@@ -115,15 +95,13 @@ nav a:hover {
   }
 }
 
-/* --------------------
-   Buttons
--------------------- */
+/* BUTTON */
 .btn {
   display: inline-block;
   margin-top: 32px;
-  background: var(--green);
-  color: white;
   padding: 15px 40px;
+  background: var(--green);
+  color: #fff;
   border-radius: 999px;
   font-weight: 600;
   text-decoration: none;
@@ -135,16 +113,12 @@ nav a:hover {
   transform: translateY(-3px);
 }
 
-/* --------------------
-   Section intro spacing
--------------------- */
+/* SECTION INTRO */
 .section-intro {
   margin-bottom: 90px;
 }
 
-/* --------------------
-   Cards & grids
--------------------- */
+/* GRID & CARDS */
 .grid {
   display: grid;
   gap: 48px;
@@ -155,34 +129,28 @@ nav a:hover {
 }
 
 .card {
+  background: #fff;
   border: 1px solid var(--border);
   border-radius: 16px;
   padding: 48px;
-  background: white;
   transition: box-shadow 0.4s ease;
 }
 
 .card:hover {
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.08);
 }
 
-/* --------------------
-   Highlight block
--------------------- */
+/* HIGHLIGHT */
 .highlight {
   background: var(--green);
-  color: white;
+  color: #fff;
   text-align: center;
   padding: 130px 20px;
 }
 
-.highlight p {
-  color: rgba(255,255,255,0.95);
-}
+.highlight p { color: rgba(255,255,255,0.95); }
 
-/* --------------------
-   Footer
--------------------- */
+/* FOOTER */
 footer {
   border-top: 1px solid var(--border);
   padding: 60px 0;
@@ -192,41 +160,21 @@ footer {
   background: var(--bg-soft);
 }
 
-/* --------------------
-   TEXT REVEAL (lighter)
--------------------- */
-.animate-text {
-  opacity: 0;
-  transform: translateY(45px);
-  transition:
-    opacity 1.4s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 1.4s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.animate-text.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* --------------------
-   BLOCK / CARD REVEAL (heavier)
--------------------- */
-.animate-block {
+/* ===== UNIVERSAL SCROLL FADE-UP (THIS IS THE KEY FIX) ===== */
+.fade-up {
   opacity: 0;
   transform: translateY(70px);
   transition:
-    opacity 1.8s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 1.8s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity 1.6s cubic-bezier(0.16,1,0.3,1),
+    transform 1.6s cubic-bezier(0.16,1,0.3,1);
 }
 
-.animate-block.show {
+.fade-up.show {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* --------------------
-   Responsive
--------------------- */
+/* RESPONSIVE */
 @media (max-width: 768px) {
   h1 { font-size: 2.2rem; }
   h2 { font-size: 1.9rem; }
