@@ -43,16 +43,15 @@ section p {
   max-width: 520px;
 }
 
-.section-intro {
-  max-width: 420px;
-  margin-bottom: 60px;
-  font-size: 1.05rem;
-  color: #444;
-}
-
 /* SECTIONS */
 section {
   padding: 130px 0;
+}
+
+/* SUPPORTING SECTIONS – TIGHTER RHYTHM */
+.how-to-buy,
+.future-vision {
+  padding: 110px 0;
 }
 
 /* HEADER */
@@ -77,7 +76,7 @@ section {
   align-items: center;
 }
 
-/* LOGO */
+/* LOGO SYSTEM */
 .brand {
   display: flex;
   align-items: center;
@@ -86,6 +85,7 @@ section {
 
 .logo-img {
   height: 34px;
+  width: auto;
   display: none;
 }
 
@@ -94,8 +94,14 @@ section {
   font-size: 1.4rem;
 }
 
-.logo-img[src] { display: block; }
-.logo-img[src] + .logo-text { display: none; }
+/* show image if present */
+.logo-img[src] {
+  display: block;
+}
+
+.logo-img[src] + .logo-text {
+  display: none;
+}
 
 /* HEADER CTA */
 .header-cta {
@@ -165,26 +171,9 @@ body.loaded .hero-image {
   transition-delay: 0.25s;
 }
 
-/* HERO IMAGE POLISH */
-.hero-image {
-  position: relative;
-}
-
-.hero-image::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(0,0,0,0.08),
-    transparent 40%
-  );
-  pointer-events: none;
-}
-
 /* BUTTON */
 .btn-primary {
-  display: inline-block; /* added: ensures clean optical alignment */
+  display: inline-block;
   margin-top: 20px;
   padding: 14px 32px;
   background: #1f5f3b;
@@ -199,23 +188,14 @@ body.loaded .hero-image {
   box-shadow: 0 8px 24px rgba(31,95,59,0.25);
 }
 
-/* TRUST */
+/* TRUST LINE */
 .cta-trust {
   font-size: 0.85rem;
   color: #666;
   margin-top: 14px;
 }
 
-/* === HERO TRUST LINE POLISH (NEW) === */
-.hero .cta-trust {
-  margin-top: 18px;
-  font-size: 0.8rem;
-  letter-spacing: 0.04em;
-  color: rgba(26, 26, 26, 0.55);
-}
-/* === END HERO TRUST LINE POLISH === */
-
-/* SPLIT */
+/* SPLIT LAYOUT */
 .split {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -274,17 +254,7 @@ body.loaded .hero-image {
   box-shadow: 0 22px 50px rgba(0,0,0,0.08);
 }
 
-/* PROCESS */
-.process-steps {
-  padding-left: 20px;
-}
-
-.process-steps li {
-  margin-bottom: 14px;
-  font-size: 0.95rem;
-}
-
-/* EYEBROW */
+/* SECTION EYEBROW */
 .section-eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.14em;
@@ -293,9 +263,43 @@ body.loaded .hero-image {
   margin-bottom: 10px;
 }
 
-/* PROBLEM SECTION */
-.problem h2 {
-  max-width: 420px;
+/* OUR SOLUTION – INTRO ALIGNMENT */
+.why-amrutha .section-intro {
+  max-width: 720px;
+}
+
+/* NARRATIVE SECTIONS – PARAGRAPH RHYTHM */
+.problem p + p,
+.single-polished p + p,
+.process p + p {
+  margin-top: 18px;
+}
+
+/* PROCESS - INTRO TO FLOW SEPARATION */
+.process .section-intro {
+  margin-bottom: 32px;
+}
+
+/* CENTERED SECTIONS – UNIFIED RHYTHM */
+.how-to-buy .section-intro,
+.how-to-buy p,
+.future-vision .section-intro,
+.future-vision p {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 22px;
+}
+
+/* HOW TO BUY – CENTERED CTA */
+.how-to-buy .container {
+  max-width: 640px;
+  text-align: center;
+}
+
+/* FUTURE VISION – CENTERED STATEMENT */
+.future-vision .container {
+  max-width: 640px;
+  text-align: center;
 }
 
 /* SECTION COLORS */
@@ -303,20 +307,6 @@ body.loaded .hero-image {
 .single-polished { background: #f3f4f1; }
 .why-amrutha { background: #ffffff; }
 .process { background: #f3f4f1; }
-
-/* CTA */
-.cta {
-  background:
-    radial-gradient(600px 200px at 50% 0%, rgba(255,255,255,0.15), transparent),
-    #1f5f3b;
-  color: #fff;
-  text-align: center;
-}
-
-.cta h2,
-.cta p {
-  color: #fff;
-}
 
 /* FOOTER */
 .footer {
