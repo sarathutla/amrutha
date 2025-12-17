@@ -347,11 +347,7 @@ max-width: 520px;
 .how-to-buy p {
   margin-left: auto;
   margin-right: auto;
-}
-
-/* HOW TO BUY – PARAGRAPH RHYTHM */
-.how-to-buy p + p {
-  margin-top: 22px;
+  margin-bottom: 22px;
 }
 
 /* FUTURE VISION - CENTERED STATEMENT */
