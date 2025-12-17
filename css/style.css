@@ -294,6 +294,11 @@ body.loaded .hero-image {
   margin-bottom: 10px;
 }
 
+/* PROBLEM SECTION */
+.problem h2 {
+  max-width: 420px;
+}
+
 /* SECTION COLORS */
 .problem { background: #ffffff; }
 .single-polished { background: #f3f4f1; }
