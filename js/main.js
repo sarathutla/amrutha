@@ -22,12 +22,3 @@ const header = document.querySelector('.site-header');
 window.addEventListener('scroll', () => {
   header.classList.toggle('scrolled', window.scrollY > 80);
 });
-
-/* HERO MICRO PARALLAX */
-const heroImg = document.querySelector('.hero-image img');
-window.addEventListener('scroll', () => {
-  if (!heroImg) return;
-  if (window.scrollY < 400) {
-    heroImg.style.transform = `translateY(${window.scrollY * 0.025}px)`;
-  }
-});
