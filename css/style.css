@@ -55,6 +55,12 @@ section {
   padding: 130px 0;
 }
 
+/* SUPPORTING SECTIONS - TIGHTER RHYTHM */
+.how-to-buy,
+.future-vision {
+padding: 110px 0;
+}
+
 /* HEADER */
 .site-header {
   position: fixed;
@@ -299,6 +305,16 @@ body.loaded .hero-image {
 /* PROBLEM SECTION */
 .problem h2 {
   max-width: 420px;
+}
+
+/* PROBLEM SECTION PARAGRAPH RHYTHM */
+.problem p + p {
+margin-top: 18px;
+}
+
+/* OUR SOLUTION - INTRO ALIGNMENT */
+.why-amrutha .section-intro {
+max-width: 520px;
 }
 
 /* SECTION COLORS */
