@@ -265,7 +265,7 @@ body.loaded .hero-image {
 
 /* OUR SOLUTION – INTRO ALIGNMENT */
 .why-amrutha .section-intro {
-  max-width: 520px;
+  max-width: 720px;
 }
 
 /* NARRATIVE SECTIONS – PARAGRAPH RHYTHM */
@@ -273,6 +273,11 @@ body.loaded .hero-image {
 .single-polished p + p,
 .process p + p {
   margin-top: 18px;
+}
+
+/* PROCESS - INTRO TO FLOW SEPARATION */
+.process.section-intro {
+  margin-bottom: 32px;
 }
 
 /* CENTERED SECTIONS – UNIFIED RHYTHM */
