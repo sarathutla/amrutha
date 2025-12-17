@@ -206,15 +206,6 @@ body.loaded .hero-image {
   letter-spacing: 0.04em;
   color: rgba(26, 26, 26, 0.55);
 }
-
-.hero .cta-trust::before {
-  content: '';
-  display: block;
-  width: 36px;
-  height: 1px;
-  background: rgba(26, 26, 26, 0.2);
-  margin: 10px 0 0;
-}
 /* === END HERO TRUST LINE POLISH === */
 
 /* SPLIT */
