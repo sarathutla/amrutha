@@ -287,17 +287,6 @@ body.loaded .hero-image {
   position: relative;
 }
 
-.process-item::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0.6em;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: rgba(31, 95, 59, 0.4);
-}
-
 /* EYEBROW */
 .section-eyebrow {
   text-transform: uppercase;
