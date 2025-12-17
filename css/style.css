@@ -70,7 +70,7 @@ section {
   align-items: center;
 }
 
-/* LOGO SYSTEM */
+/* LOGO */
 .brand {
   display: flex;
   align-items: center;
@@ -79,7 +79,6 @@ section {
 
 .logo-img {
   height: 34px;
-  width: auto;
   display: none;
 }
 
@@ -88,14 +87,8 @@ section {
   font-size: 1.4rem;
 }
 
-/* show image if present */
-.logo-img[src] {
-  display: block;
-}
-
-.logo-img[src] + .logo-text {
-  display: none;
-}
+.logo-img[src] { display: block; }
+.logo-img[src] + .logo-text { display: none; }
 
 /* HEADER CTA */
 .header-cta {
@@ -165,9 +158,26 @@ body.loaded .hero-image {
   transition-delay: 0.25s;
 }
 
+/* HERO IMAGE POLISH */
+.hero-image {
+  position: relative;
+}
+
+.hero-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.08),
+    transparent 40%
+  );
+  pointer-events: none;
+}
+
 /* BUTTON */
 .btn-primary {
-  display: inline-block;
+  display: inline-block; /* added: ensures clean optical alignment */
   margin-top: 20px;
   padding: 14px 32px;
   background: #1f5f3b;
@@ -189,6 +199,15 @@ body.loaded .hero-image {
   margin-top: 14px;
 }
 
+/* === HERO TRUST LINE POLISH (NEW) === */
+.hero .cta-trust {
+  margin-top: 18px;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  color: rgba(26, 26, 26, 0.55);
+}
+/* === END HERO TRUST LINE POLISH === */
+
 /* SPLIT */
 .split {
   display: grid;
@@ -205,7 +224,7 @@ body.loaded .hero-image {
   direction: ltr;
 }
 
-/* IMAGE FRAME SYSTEM */
+/* IMAGE FRAME */
 .image-frame {
   border-radius: 24px;
   overflow: hidden;
@@ -293,10 +312,6 @@ body.loaded .hero-image {
 .cta h2,
 .cta p {
   color: #fff;
-}
-
-.cta h2 {
-  letter-spacing: -0.01em;
 }
 
 /* FOOTER */
