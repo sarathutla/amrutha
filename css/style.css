@@ -274,14 +274,28 @@ body.loaded .hero-image {
   box-shadow: 0 22px 50px rgba(0,0,0,0.08);
 }
 
-/* PROCESS */
-.process-steps {
-  padding-left: 20px;
+/* PROCESS FLOW */
+.process-flow {
+  margin-top: 30px;
 }
 
-.process-steps li {
-  margin-bottom: 14px;
+.process-item {
   font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 18px;
+  padding-left: 16px;
+  position: relative;
+}
+
+.process-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(31, 95, 59, 0.4);
 }
 
 /* EYEBROW */
