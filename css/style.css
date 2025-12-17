@@ -177,7 +177,7 @@ body.loaded .hero-image {
 
 /* BUTTON */
 .btn-primary {
-  display: inline-block;
+  display: inline-block; /* added: ensures clean optical alignment */
   margin-top: 20px;
   padding: 14px 32px;
   background: #1f5f3b;
@@ -198,6 +198,24 @@ body.loaded .hero-image {
   color: #666;
   margin-top: 14px;
 }
+
+/* === HERO TRUST LINE POLISH (NEW) === */
+.hero .cta-trust {
+  margin-top: 18px;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  color: rgba(26, 26, 26, 0.55);
+}
+
+.hero .cta-trust::before {
+  content: '';
+  display: block;
+  width: 36px;
+  height: 1px;
+  background: rgba(26, 26, 26, 0.2);
+  margin: 10px 0 0;
+}
+/* === END HERO TRUST LINE POLISH === */
 
 /* SPLIT */
 .split {
