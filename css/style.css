@@ -349,6 +349,11 @@ max-width: 520px;
   margin-right: auto;
 }
 
+/* HOW TO BUY – PARAGRAPH RHYTHM */
+.how-to-buy p + p {
+  margin-top: 22px;
+}
+
 /* FUTURE VISION - CENTERED STATEMENT */
 .future-vision .container {
   max-width: 640px;
