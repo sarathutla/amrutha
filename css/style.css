@@ -231,6 +231,42 @@ body.loaded .hero-image {
 .image-small { height: 260px; }
 .image-tall { height: 360px; }
 
+/* QR HERO */
+.qr-frame {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 36px;
+  background: linear-gradient(180deg, #ffffff, #faf9f6);
+}
+
+.qr-frame img {
+  width: 220px;
+  height: 220px;
+  object-fit: contain;
+  box-shadow: none;
+}
+
+.qr-caption {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.qr-title {
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #1f5f3b;
+}
+
+.qr-sub {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 6px;
+}
+
 /* FEATURES */
 .features {
   display: grid;
