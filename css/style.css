@@ -200,6 +200,11 @@ body.loaded .hero-image {
   margin-top: 14px;
 }
 
+/* MOBILE-ONLY TRUST LINE */
+.cta-trust-mobile {
+  display: none;
+}
+
 /* SPLIT LAYOUT */
 .split {
   display: grid;
@@ -413,6 +418,23 @@ body.loaded .hero-image {
   /* MOBILE HERO SPACING */
   .hero-sub {
     margin-bottom: 6px;
+  }
+
+   /* SHOW HERO IMAGE, HIDE QR */
+  .qr-frame {
+    display: none;
+  }
+
+  .hero-image:not(.qr-frame) {
+    display: block;
+  }
+
+  /* MOBILE TRUST LINE */
+  .cta-trust-mobile {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: #666;
   }
 }
 
