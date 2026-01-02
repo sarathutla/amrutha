@@ -282,6 +282,26 @@ body.loaded .hero-image {
   display: none;
 }
 
+/* HOW TO BUY – DESKTOP QR */
+.how-to-buy-qr {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.how-to-buy-qr img {
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
+}
+
+.how-to-buy-qr-text {
+  margin-top: 12px;
+  font-size: 0.85rem;
+  color: #666;
+}
+
 /* FEATURES */
 .features {
   display: grid;
@@ -436,6 +456,11 @@ body.loaded .hero-image {
     display: block;
   }
 
+  /* HIDE HOW TO BUY QR ON MOBILE */
+    .how-to-buy-qr {
+    display: none;
+  }
+  
   /* MOBILE TRUST LINE */
   .cta-trust-mobile {
     display: block;
