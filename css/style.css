@@ -277,6 +277,11 @@ body.loaded .hero-image {
   margin-top: 6px;
 }
 
+/* HERO VISUAL VARIANTS */
+.hero-image-mobile {
+  display: none;
+}
+
 /* FEATURES */
 .features {
   display: grid;
@@ -394,6 +399,8 @@ body.loaded .hero-image {
 }
 
 @media (max-width: 768px) {
+
+  /* MOBILE STICKY CTA */
   .wa-sticky {
     display: block;
     position: fixed;
@@ -420,12 +427,12 @@ body.loaded .hero-image {
     margin-bottom: 6px;
   }
 
-   /* SHOW HERO IMAGE, HIDE QR */
+  /* HERO VISUAL SWITCH */
   .qr-frame {
     display: none;
   }
 
-  .hero-image:not(.qr-frame) {
+  .hero-image-mobile {
     display: block;
   }
 
